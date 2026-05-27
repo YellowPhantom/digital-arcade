@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcade.OS</title>
+    <title>ARCADE.OS</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,42 +22,42 @@
         <main id="menu-view" class="view active">
             <div class="game-grid">
                 <div class="game-card" data-game="snake">
-                    <div class="card-icon">🐍</div>
+                    <div class="card-icon icon-snake"><i data-lucide="route"></i></div>
                     <div class="card-content">
                         <h2>Snake Protocol</h2>
                         <p>Consume data packets, expand your length. Avoid collision.</p>
                     </div>
                 </div>
                 <div class="game-card" data-game="breakout">
-                    <div class="card-icon">🧱</div>
+                    <div class="card-icon icon-breakout"><i data-lucide="layout-grid"></i></div>
                     <div class="card-content">
                         <h2>Breakout Blitz</h2>
                         <p>Destroy the firewall bricks using kinetic deflection.</p>
                     </div>
                 </div>
                 <div class="game-card" data-game="pong">
-                    <div class="card-icon">🏓</div>
+                    <div class="card-icon icon-pong"><i data-lucide="monitor-play"></i></div>
                     <div class="card-content">
                         <h2>Neon Pong</h2>
                         <p>Classic deflection matrix. First entity to 10 points wins.</p>
                     </div>
                 </div>
                 <div class="game-card" data-game="memory">
-                    <div class="card-icon">🧩</div>
+                    <div class="card-icon icon-memory"><i data-lucide="cpu"></i></div>
                     <div class="card-content">
                         <h2>Memory Match</h2>
                         <p>Test your RAM. Match all cryptographic pairs efficiently.</p>
                     </div>
                 </div>
                 <div class="game-card" data-game="asteroids">
-                    <div class="card-icon">🚀</div>
+                    <div class="card-icon icon-asteroids"><i data-lucide="rocket"></i></div>
                     <div class="card-content">
                         <h2>Asteroid Blaster</h2>
                         <p>Navigate the debris field. Destroy hazards to survive.</p>
                     </div>
                 </div>
                 <div class="game-card" data-game="runner">
-                    <div class="card-icon">🏃</div>
+                    <div class="card-icon icon-runner"><i data-lucide="person-standing"></i></div>
                     <div class="card-content">
                         <h2>Endless Runner</h2>
                         <p>Execute evasion maneuvers over approaching obstacles.</p>
@@ -66,8 +69,7 @@
         <main id="game-view" class="view hidden">
             <div class="game-header">
                 <button id="btn-back" class="btn btn-secondary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                    Disconnect
+                    <i data-lucide="arrow-left" style="width: 18px; height: 18px;"></i> Disconnect
                 </button>
                 <div class="score-display">
                     <span id="score-label">SCORE</span>
@@ -89,7 +91,7 @@
 
     <div id="modal-overlay" class="modal-overlay hidden">
         <div class="modal">
-            <h2 class="modal-title">Sequence Terminated</h2>
+            <h2 class="modal-title">SEQUENCE TERMINATED</h2>
             <div class="modal-score">
                 <span>FINAL SCORE</span>
                 <h3 id="modal-score-value">0</h3>
